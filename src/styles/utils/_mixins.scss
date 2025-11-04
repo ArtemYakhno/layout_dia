@@ -53,12 +53,3 @@
     padding-inline: 55px;
   }
 }
-
-@mixin full-width {
-  width:  100dvw;
-  margin-left: calc(-50dvw + 50%);
-  margin-right: calc(-50dvw + 50%);
-  @include on-desktop() {
-    width: 50vw;
-  }
-}
