@@ -1,0 +1,9 @@
+.container {
+  @include padding-inline;
+  box-sizing: border-box;
+
+  @include on-desktop {
+    max-width: $desktop-min-width;
+    margin-inline: auto;
+  }
+}

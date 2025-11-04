@@ -1,0 +1,72 @@
+.slider {
+  &__item {
+    height: 390px;
+    @include on-desktop {
+      height: calc(100vh - 125px);
+      max-height: 800px;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    @include on-desktop {
+      object-fit: fill;
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    z-index: 10;
+
+    @include hover (background-color,#2060F6);
+
+    &--prev {
+      bottom: 108px;
+      left: 20px;
+    }
+
+    &--next {
+      bottom: 108px;
+      left: 68px;
+    }
+  }
+
+  &__slide-text {
+    position: absolute;
+    bottom: 24px;
+    left: 20px;
+
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    font-size: 14px;
+    line-height: 140%;
+    z-index: 10;
+
+    &::before {
+      content: 'Intro';
+      position: absolute;
+      bottom: 24px;
+
+
+      font-family: Poppins, sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+  }
+}
+
