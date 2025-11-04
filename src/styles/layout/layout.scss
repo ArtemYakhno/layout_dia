@@ -7,6 +7,11 @@
     background: #fff;
     min-width: 320px;
   }
+  &__header {
+    background-color: $background-color;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
   // &__menu {
   //   position: fixed;
   //   top: 0;
