@@ -47,33 +47,80 @@
                   <a
                     href="#"
                     class="nav__item"
+                    data-language="about-us"
                   >
                     About us
                   </a>
                   <a
                     href="#"
                     class="nav__item"
+                    data-language="services"
                   >
                     Services
                   </a>
                   <a
                     href="#"
                     class="nav__item"
+                    data-language="testimonials"
                   >
                     Testimonials
                   </a>
                   <a
                     href="#"
                     class="nav__item"
+                    data-language="contact-us"
                   >
                     Contact Us
                   </a>
                 </nav>
+                <div class="top-bar__language-switcher language-switcher">
+                  <div class="language-switcher__trigger">
+                    <img
+                      class="language-switcher__current-flag-country"
+                      src="https://raw.githubusercontent.com/cristiroma/countries/c6edc915f71c06441fab4da306deac95a28d70aa/data/flags/SVG/US.svg"
+                      alt="country flag"
+                    />
+                    <img
+                      class="language-switcher__shevron"
+                      src="./images/icons/arrow-left-white.svg"
+                      alt="arrow"
+                    />
+                  </div>
+                  <div class="language-switcher__content">
+                    <div
+                      data-country="US"
+                      class="language-switcher__item"
+                    >
+                      <img
+                        class="language-switcher__flag-country"
+                        src="https://raw.githubusercontent.com/cristiroma/countries/c6edc915f71c06441fab4da306deac95a28d70aa/data/flags/SVG/US.svg"
+                        alt="country flag"
+                      />
+                      <span class="language-switcher__language-code">
+                        English
+                      </span>
+                    </div>
+                    <div
+                      data-country="UA"
+                      class="language-switcher__item"
+                    >
+                      <img
+                        class="language-switcher__flag-country"
+                        src="https://raw.githubusercontent.com/cristiroma/countries/c6edc915f71c06441fab4da306deac95a28d70aa/data/flags/SVG/UA.svg"
+                        alt="country flag"
+                      />
+                      <span class="language-switcher__language-code">
+                        Ukraine
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="top-bar__right">
                 <a
                   href="#"
                   class="top-bar__hire-us"
+                  data-language="hire-us"
                 >
                   HIRE US
                 </a>
@@ -82,14 +129,23 @@
           </div>
           <div class="header__bottom">
             <div class="header__content">
-              <h1 class="header__title">Strategic Agency</h1>
-              <p class="header__subtitle">
+              <h1
+                data-language="header__title"
+                class="header__title"
+              >
+                Strategic Agency
+              </h1>
+              <p
+                data-language="header__subtitle"
+                class="header__subtitle"
+              >
                 We believe in the power of bold ideas that can solve business
                 challenges.
               </p>
               <a
                 href="#about-us"
                 class="header__cta button"
+                data-language="learn-more"
               >
                 Learn More
               </a>
@@ -134,12 +190,116 @@
               alt="Next Slide"
             />
           </div>
-          <p class="slider__slide-text">
+          <p
+            data-language="slider__slide-text"
+            class="slider__slide-text"
+          >
             By the same illusion which lifts the horizon.
           </p>
         </div>
       </section>
     </div>
-    <div class="temp"></div>
+    <aside
+      class="page__menu"
+      id="menu"
+    >
+      <div class="menu">
+        <div class="menu__content">
+          <div class="menu__top container">
+            <a
+              href="#"
+              class="menu__logo"
+            >
+              <img
+                class="logo"
+                src="./images/logo/Logo.svg"
+                alt="AIR"
+              />
+            </a>
+            <a
+              href="#"
+              class="menu__burger icon icon--close"
+            ></a>
+          </div>
+          <div class="menu__bottom container">
+            <nav class="menu__nav nav">
+              <a
+                href="#"
+                class="nav__item"
+                data-language="about-us"
+              >
+                About us
+              </a>
+              <a
+                href="#"
+                class="nav__item"
+                data-language="services"
+              >
+                Services
+              </a>
+              <a
+                href="#"
+                class="nav__item"
+                data-language="testimonials"
+              >
+                Testimonials
+              </a>
+              <a
+                href="#"
+                class="nav__item"
+                data-language="contact-us"
+              >
+                Contact Us
+              </a>
+            </nav>
+            <a
+              href="#"
+              class="menu__hire-us"
+              data-language="hire-us"
+            >
+              HIRE US
+            </a>
+            <div class="menu__language-switcher language-switcher">
+              <div class="language-switcher__trigger">
+                <img
+                  class="language-switcher__current-flag-country"
+                  src="https://raw.githubusercontent.com/cristiroma/countries/c6edc915f71c06441fab4da306deac95a28d70aa/data/flags/SVG/US.svg"
+                  alt="country flag"
+                />
+                <img
+                  class="language-switcher__shevron"
+                  src="./images/icons/arrow-left-white.svg"
+                  alt="arrow"
+                />
+              </div>
+              <div class="language-switcher__content">
+                <div
+                  data-country="US"
+                  class="language-switcher__item"
+                >
+                  <img
+                    class="language-switcher__flag-country"
+                    src="https://raw.githubusercontent.com/cristiroma/countries/c6edc915f71c06441fab4da306deac95a28d70aa/data/flags/SVG/US.svg"
+                    alt="country flag"
+                  />
+                  <span class="language-switcher__language-code">English</span>
+                </div>
+                <div
+                  data-country="UA"
+                  class="language-switcher__item"
+                >
+                  <img
+                    class="language-switcher__flag-country"
+                    src="https://raw.githubusercontent.com/cristiroma/countries/c6edc915f71c06441fab4da306deac95a28d70aa/data/flags/SVG/UA.svg"
+                    alt="country flag"
+                  />
+                  <span class="language-switcher__language-code">Ukraine</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
   </body>
 </html>

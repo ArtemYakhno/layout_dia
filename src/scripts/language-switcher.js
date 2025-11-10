@@ -1,0 +1,68 @@
+'use strict';
+import { translations } from './translations/transaltions.js';
+
+let userLanguage = 'US';
+
+const switchers = document.querySelectorAll('.language-switcher');
+
+switchers.forEach((languageSwitcher) => {
+  const switcherTrigger = languageSwitcher.querySelector(
+    '.language-switcher__trigger',
+  );
+  const languageContent = languageSwitcher.querySelector(
+    '.language-switcher__content',
+  );
+
+  switcherTrigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    languageSwitcher.classList.toggle('language-switcher--active');
+  });
+
+  languageContent.addEventListener('click', (e) => {
+    const languageItem = e.target.closest('.language-switcher__item');
+    if (languageItem) {
+      const selectedLang = languageItem.getAttribute('data-country');
+      switchLang(selectedLang);
+
+      document
+        .querySelectorAll('.language-switcher__current-flag-country')
+        .forEach((img) => {
+          img.src = `https://raw.githubusercontent.com/cristiroma/countries/c6edc915f71c06441fab4da306deac95a28d70aa/data/flags/SVG/${selectedLang}.svg`;
+        });
+
+      languageSwitcher.classList.remove('language-switcher--active');
+    }
+  });
+});
+
+function translatePage() {
+  // document.querySelectorAll("[data-language]").forEach(el => {
+  //   const key = el.getAttribute("data-language");
+  //   el.textContent = translations[userLanguage][key];
+  // });
+}
+
+function setActiveStyle() {
+  document
+    .querySelectorAll('.language-switcher__language-code--active')
+    .forEach((el) =>
+      el.classList.remove('language-switcher__language-code--active'),
+    );
+
+  document
+    .querySelectorAll(
+      `[data-country="${userLanguage}"] .language-switcher__language-code`,
+    )
+    .forEach((el) =>
+      el.classList.add('language-switcher__language-code--active'),
+    );
+}
+
+function switchLang(lang) {
+  userLanguage = lang;
+  setActiveStyle();
+  translatePage();
+}
+
+setActiveStyle();
+translatePage();

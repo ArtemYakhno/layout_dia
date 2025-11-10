@@ -1,16 +1,13 @@
 .header {
-  background-color: $background-color;
-  border-bottom-left-radius: $radius;
-  border-bottom-right-radius: $radius;
-
   &__top {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    z-index: 1001;
+    // width: 100%;
+    z-index: 2;
     background-color: $background-color;
+
   }
 
   &__bottom {

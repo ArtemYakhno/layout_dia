@@ -5,6 +5,7 @@
   padding-block: 20px;
   @include on-desktop {
     padding-block: 48px;
+    // background-color: inherit;
   }
   &__left {
     display: flex;
@@ -20,11 +21,19 @@
     }
   }
 
-  &__nav {
+  &__center {
     display: none;
-    column-gap: 48px;
+    align-items: center;
     @include on-desktop {
       display: flex;
+      column-gap: 48px;
+    }
+  }
+
+  &__nav {
+    @include on-desktop {
+      display: flex;
+      column-gap: 48px;
     }
   }
 

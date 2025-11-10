@@ -11,26 +11,28 @@
     background-color: $background-color;
     border-bottom-left-radius: $radius;
     border-bottom-right-radius: $radius;
+    position: relative;
   }
-  // &__menu {
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   opacity: 0;
-  //   height: 100vh;
-  //   background-color: rgba(0, 0, 0, 0.4);
-  //   visibility: hidden;
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    height: 100vh;
+    z-index: 3;
+    background-color: rgba(44, 44, 44, 0.95);
+    visibility: hidden;
 
-  //   transform: translateY(-100%);
-  //   transition: all $effect-duration;
-  //   &:target {
-  //     opacity: 1;
-  //     visibility: visible;
-  //     transform: translateY(0);
-  //   }
-  // }
-  // &:has(.page__menu:target) {
-  //   overflow: hidden; /* not to scroll the page */
-  // }
+    transform: translateY(-100%);
+    transition: all $effect-duration;
+    &:target {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+  &:has(.page__menu:target) {
+    overflow: hidden; /* not to scroll the page */
+  }
 }
