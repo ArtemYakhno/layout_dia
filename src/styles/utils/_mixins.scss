@@ -53,3 +53,17 @@
     padding-inline: 55px;
   }
 }
+
+@mixin padding-block-section-smaller {
+  padding-block: 120px;
+  @include on-tablet {
+    padding-block: 148px;
+  }
+}
+@mixin padding-block-section-bigger{
+  padding-block: 72px;
+   @include on-tablet {
+      padding-block: 128px;
+    }
+}
+
