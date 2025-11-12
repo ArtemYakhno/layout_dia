@@ -60,10 +60,9 @@
     padding-block: 148px;
   }
 }
-@mixin padding-block-section-smaller{
+@mixin padding-block-section-smaller {
   padding-block: 72px;
-   @include on-tablet {
-      padding-block: 128px;
-    }
+  @include on-tablet {
+    padding-block: 128px;
+  }
 }
-

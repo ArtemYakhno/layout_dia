@@ -1,6 +1,7 @@
 .about-us {
   &__content {
     @include padding-block-section-bigger;
+
     display: grid;
     row-gap: 24px;
     text-align: center;

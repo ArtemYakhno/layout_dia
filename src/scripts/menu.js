@@ -1,4 +1,4 @@
-const togglers = document.querySelectorAll('.menu__burger, .top-bar__burger');
+const togglers = document.querySelectorAll('.menu__burger, .header__burger');
 const menu = document.querySelector('.page__menu');
 
 togglers.forEach(btn =>

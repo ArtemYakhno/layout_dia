@@ -19,7 +19,7 @@
 
   &__title {
     @extend %fm-poppins_w-600_fs-32_lh-150_c-253757;
-    @include on-tablet{
+    @include on-tablet {
       max-width: 200px;
     }
   }

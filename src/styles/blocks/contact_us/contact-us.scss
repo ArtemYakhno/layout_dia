@@ -9,6 +9,7 @@
 
   &__container {
     @include page-grid;
+
     row-gap: 80px;
     @include on-tablet {
       row-gap: 120px;
@@ -17,15 +18,15 @@
 
   &__side {
     grid-column: 1/-1;
-    @include on-tablet{
+    @include on-tablet {
       grid-column: span 4;
     }
 
-    @include on-desktop{
-      &--top{
+    @include on-desktop {
+      &--top {
         grid-column: 1/6;
       }
-      &--bottom{
+      &--bottom {
         grid-column: 8/-1;
       }
     }
@@ -33,6 +34,7 @@
 
   &__title {
     @extend %fm-poppins_w-600_fs-32_lh-150_c-253757;
+
     color: #fff;
   }
 
@@ -69,13 +71,14 @@
     row-gap: 8px;
   }
 
-  &__block-item-text{
+  &__block-item-text {
     @extend %fm-poppins_w-700_fs-13_lh-100_c-C0CDD7;
+
     color: #fff;
     opacity: 0.5;
   }
 
-  &__block-item-data{
+  &__block-item-data {
     @extend %fm-opensans_w-600_fs-24_lh-150_c-6C788BF;
     color: #fff;
   }

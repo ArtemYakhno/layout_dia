@@ -1,66 +1,65 @@
 .header {
-  &__top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 500;
-    background-color: $background-color;
-
-  }
-
-  &__bottom {
-    display: flex;
-    flex-direction: column;
-    margin-top: 69.5px;
-
-    @include on-desktop {
-      height: calc(100vh - 125px);
-      max-height: 800px;
-      flex-direction: row;
-      align-items: center;
-      margin-top: 125px;
-    }
-  }
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $background-color;
+  z-index: 500;
 
   &__content {
-    margin-top: 28px;
-    margin-bottom: 48px;
-
-    @include on-tablet {
-      margin-top: 36px;
-      margin-bottom: 147px;
-    }
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 20px;
     @include on-desktop {
-      margin-top: 0;
-      margin-bottom: 0;
-      width: 362px;
+      padding-block: 48px;
     }
   }
 
-  &__title {
-    @extend %fm-poppins_w-600_fs-52_lh-120_c-FFFFFF;
+  &__left {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
   }
-
-  &__subtitle {
-    @extend %fm-opensans_w-400_fs-18_lh-150_c-FFFFFF;
-    margin-top: 32px;
-    margin-bottom: 72px;
-
-    @include on-tablet {
-      max-width: 362px;
-      margin-top: 24px;
-      margin-bottom: 56px;
-    }
-
+  &__logo {
+    line-height: 0;
+  }
+  &__burger {
     @include on-desktop {
-      margin-top: 32px;
-      margin-bottom: 84px;
+      display: none;
     }
   }
 
-  &__button{
-    @extend %button;
+  &__center {
+    display: none;
+    align-items: center;
+    @include on-desktop {
+      display: flex;
+      column-gap: 48px;
+    }
+  }
+
+  &__nav {
+    @include on-desktop {
+      display: flex;
+      column-gap: 48px;
+    }
+  }
+
+  &__hire-us {
+    @extend %fm-poppins_w-700_fs-13_lh-150_c-FFFFFF;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      background-color: #2060f6;
+      height: 2px;
+      width: 100%;
+    }
   }
 }

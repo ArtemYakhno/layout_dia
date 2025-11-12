@@ -40,7 +40,7 @@
 
     transition: all $effect-duration ease;
 
-    @include on-desktop{
+    @include on-desktop {
       width: auto;
     }
   }

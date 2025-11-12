@@ -1,36 +1,33 @@
-.footer{
+.footer {
   background-color: $background-color;
   padding-bottom: 80px;
-  @include on-tablet{
 
-  }
-
-  &__content{
+  &__content {
     display: flex;
     flex-direction: column;
     row-gap: 48px;
 
-    @include on-tablet{
+    @include on-tablet {
       row-gap: 24px;
     }
 
-    @include on-desktop{
+    @include on-desktop {
       flex-direction: row;
       justify-content: space-between;
     }
   }
 
-  &__nav{
+  &__nav {
     display: flex;
     flex-direction: column;
     row-gap: 24px;
 
-    @include on-tablet{
+    @include on-tablet {
       flex-direction: row;
       justify-content: space-between;
     }
 
-    @include on-desktop{
+    @include on-desktop {
       justify-content: left;
       column-gap: 64px;
     }

@@ -4,6 +4,7 @@
 
   &__content {
     @include padding-block-section-smaller;
+
     display: grid;
     row-gap: 56px;
     @include on-tablet {
@@ -13,6 +14,7 @@
 
   &__title {
     @extend %fm-poppins_w-600_fs-44_lh-120_c-253757;
+
     text-align: center;
     @include on-tablet {
       font-size: 56px;
@@ -45,13 +47,16 @@
     aspect-ratio: 1;
     border-radius: $radius;
   }
+
   &__card-title {
     @extend %fm-poppins_w-600_fs-20_lh-140_c-253757;
+
     margin-top: 32px;
     margin-bottom: 16px;
   }
   &__card-text {
     @extend %fm-opensans_w-400_fs-14_lh-150_c-6C788B;
+
     max-width: 264px;
     text-align: center;
   }

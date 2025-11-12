@@ -26,9 +26,10 @@
   border: none;
   border-bottom: 2px solid #fff;
   @extend %fm-poppins_w-600_fs-15_lh-100_c-FFFFFF;
-  padding: 0 0 12px 0;
+
+  padding: 0 0 12px;
   outline: none;
-  transition: border-color $effect-duration;;
+  transition: border-color $effect-duration;
 
   &::placeholder {
     opacity: 0.7;
