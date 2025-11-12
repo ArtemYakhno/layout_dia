@@ -1,13 +1,13 @@
 .our-expertise {
   background-color: #fff;
-  border-radius: $radius 0 ;
+  border-radius: $radius;
 
   &__content {
-    @include padding-block-section-bigger;
+    @include padding-block-section-smaller;
     display: grid;
     row-gap: 56px;
-    @include on-tablet{
-      row-gap: 64px
+    @include on-tablet {
+      row-gap: 64px;
     }
   }
 
@@ -23,33 +23,33 @@
   &__cards-content {
     @include page-grid;
     row-gap: 56px;
-    @include on-tablet{
+    @include on-tablet {
       row-gap: 72px;
     }
-    @include on-desktop{
+    @include on-desktop {
       justify-content: space-between;
     }
   }
   &__card {
     grid-column: 1/-1;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     @include on-desktop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include on-desktop {
       grid-column: span 4;
-     }
+    }
   }
 
-  &__card-photo{
+  &__card-photo {
     width: 166px;
     aspect-ratio: 1;
     border-radius: $radius;
   }
-  &__card-title{
+  &__card-title {
     margin-top: 32px;
     margin-bottom: 16px;
   }
-  &__card-text{
+  &__card-text {
     max-width: 362px;
     text-align: center;
   }
