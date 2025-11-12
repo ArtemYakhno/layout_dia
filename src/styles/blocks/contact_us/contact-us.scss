@@ -32,6 +32,8 @@
   }
 
   &__title {
+    @extend %fm-poppins_w-600_fs-32_lh-150_c-253757;
+    color: #fff;
   }
 
   &__form {
@@ -65,6 +67,17 @@
   &__block-item {
     display: grid;
     row-gap: 8px;
+  }
+
+  &__block-item-text{
+    @extend %fm-poppins_w-700_fs-13_lh-100_c-C0CDD7;
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  &__block-item-data{
+    @extend %fm-opensans_w-600_fs-24_lh-150_c-6C788BF;
+    color: #fff;
   }
 
   &__socials {

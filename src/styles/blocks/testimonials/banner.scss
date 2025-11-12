@@ -14,28 +14,29 @@
     }
   }
 
-  &__content{
+  &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
   }
 
-  &__title{
+  &__title {
+    @extend %fm-poppins_w-600_fs-52_lh-150_c-253757;
   }
 
-  &__text{
+  &__text {
+    @extend %fm-opensans_w-600_fs-24_lh-150_c-6C788BF;
     max-width: 558px;
     text-align: center;
     margin-top: 24px;
     margin-bottom: 56px;
-    @include on-tablet{
+    @include on-tablet {
       margin-bottom: 64px;
     }
   }
 
-  &__button{
+  &__button {
     @extend %button;
   }
 }

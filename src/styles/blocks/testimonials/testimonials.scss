@@ -14,10 +14,14 @@
     }
   }
   &__sub-title {
+    @extend %fm-poppins_w-600_fs-13_lh-100_c-C0CDD7;
   }
 
   &__title {
-    
+    @extend %fm-poppins_w-600_fs-32_lh-150_c-253757;
+    @include on-tablet{
+      max-width: 200px;
+    }
   }
 
   &__card {
@@ -81,6 +85,7 @@
     width: 110px;
     z-index: 2;
     aspect-ratio: 1;
+    border-radius: 100%;
     @include on-tablet {
       width: 140px;
     }
@@ -90,10 +95,11 @@
   }
 
   &__card-text {
+    @extend %fm-opensans_w-600_fs-13_lh-150_c-6C788BF;
     margin-top: 8px;
     margin-bottom: 16px;
     text-align: center;
-    max-width: 362px;
+    max-width: 250px;
 
     @include on-tablet {
       margin-top: 16px;
@@ -107,8 +113,11 @@
 
   &__card-name {
     margin-bottom: 4px;
+    @extend %fm-opensans_w-600_fs-13_lh-150_c-6C788BF;
+    color: $main-text-color;
   }
 
   &__card-profesion {
+    @extend %fm-poppins_w-700_fs-13_lh-100_c-C0CDD7;
   }
 }
