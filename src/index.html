@@ -37,10 +37,10 @@
                     alt="AIR"
                   />
                 </a>
-                <a
+                <div
                   href="#menu"
                   class="top-bar__burger icon icon--burger"
-                ></a>
+                ></div>
               </div>
               <div class="top-bar__center">
                 <nav class="top-bar__nav nav">
@@ -144,7 +144,7 @@
               </p>
               <a
                 href="#about-us"
-                class="header__cta button"
+                class="header__button"
                 data-language="learn-more"
               >
                 Learn More
@@ -216,10 +216,10 @@
                 alt="AIR"
               />
             </a>
-            <a
+            <div
               href="#"
               class="menu__burger icon icon--close"
-            ></a>
+            ></div>
           </div>
           <div class="menu__bottom container">
             <nav class="menu__nav nav">
@@ -303,19 +303,19 @@
     </aside>
     <main class="main">
       <section
-        class="who-we-are container section"
-        id="who-we-are"
+        class="about-us container section"
+        id="about-us"
       >
-        <div class="who-we-are__content">
+        <div class="about-us__content">
           <h2
-            class="section__title who-we-are__title"
-            data-language="who-we-are-title"
+            class="section__title about-us__title"
+            data-language="about-us-title"
           >
             Who we are
           </h2>
           <p
-            data-language="who-we-are-text"
-            class="who-we-are__text"
+            data-language="about-us-text"
+            class="about-us__text"
           >
             We embrace a strategic approach to creative ideas. We are interested
             in people and human relationships. This is the main thing you need
@@ -518,10 +518,103 @@
               We are sure that first-rate job is possible only if all three
               components are united.
             </p>
-            <a class="banner__button button">Apply</a>
+            <a class="banner__button">Apply</a>
+          </div>
+        </div>
+      </section>
+      <section class="contact-us">
+        <div class="contact-us__container container">
+          <div class="contact-us__side contact-us__side--top">
+            <h2 class="contact-us__title">Send us a message</h2>
+            <form
+              class="contact-us__form"
+              action="#"
+            >
+              <input
+                class="contact-us__form-input"
+                type="text"
+                placeholder="Your email"
+              />
+              <input
+                class="contact-us__form-input"
+                type="text"
+                placeholder="Your name"
+              />
+              <input
+                class="contact-us__form-input"
+                type="text"
+                placeholder="Your message"
+              />
+              <button class="contact-us__form-button">Send</button>
+            </form>
+          </div>
+          <div class="contact-us__side contact-us__side--bottom">
+            <h2 class="contact-us__title">Contact us</h2>
+            <div class="contact-us__blocks">
+              <div class="contact-us__block-item">
+                <p>Call us</p>
+                <a href="#">654 321 987</a>
+              </div>
+              <div class="contact-us__block-item">
+                <p>Visit us</p>
+                <a href="#">2905 West Drive, Buffalo Grove</a>
+              </div>
+              <div class="contact-us__block-item">
+                <p>Our socials</p>
+                <div class="contact-us__socials">
+                  <div class="icon icon--facebook"></div>
+                  <div class="icon icon--twitter"></div>
+                  <div class="icon icon--instagram"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__content container">
+        <a
+          href="#"
+          class="footer__logo"
+        >
+          <img
+            class="logo"
+            src="./images/logo/Logo.svg"
+            alt="AIR"
+          />
+        </a>
+        <nav class="footer__nav nav">
+          <a
+            href="#"
+            class="nav__item"
+            data-language="about-us"
+          >
+            About us
+          </a>
+          <a
+            href="#"
+            class="nav__item"
+            data-language="services"
+          >
+            Services
+          </a>
+          <a
+            href="#"
+            class="nav__item"
+            data-language="testimonials"
+          >
+            Testimonials
+          </a>
+          <a
+            href="#"
+            class="nav__item"
+            data-language="contact-us"
+          >
+            Contact Us
+          </a>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>

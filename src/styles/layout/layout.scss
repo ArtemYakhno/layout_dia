@@ -20,19 +20,21 @@
     right: 0;
     opacity: 0;
     height: 100vh;
-    z-index: 3;
+    z-index: 1000;
     background-color: rgba(44, 44, 44, 0.95);
     visibility: hidden;
 
     transform: translateY(-100%);
     transition: all $effect-duration;
-    &:target {
+    &--is-open {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
+      overflow: hidden;
     }
   }
-  &:has(.page__menu:target) {
-    overflow: hidden; /* not to scroll the page */
+
+   &:has(.page__menu--is-open) {
+    overflow: hidden;
   }
 }

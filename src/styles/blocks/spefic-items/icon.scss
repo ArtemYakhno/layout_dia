@@ -1,7 +1,7 @@
 .icon {
   display: block;
   width: 24px;
-  height: 24px;
+  aspect-ratio: 1;
   background-size: cover;
 
   @include hover(transform, scale(1.2));
@@ -22,10 +22,21 @@
   &--arow-right-white{
     background-image: url(../images/icons/arrow-right-white.svg);
   }
-  // &--facebook {
-  //   background-image: url(../images/Icons/facebook-letter-logo.svg);
-  // }
-  // &--instagram {
-  //   background-image: url(../images/Icons/instagram.svg);
-  // }
+  &--facebook {
+    background-image: url(../images/Icons/facebook.svg);
+    width: 32px;
+  }
+  &--instagram {
+    background-image: url(../images/Icons/instagram.svg);
+    width: 32px;
+  }
+
+  &--twitter{
+    background-image: url(../images/icons/twitter.svg);
+    width: 32px;
+
+    &:hover{
+      background-image: url(../images/icons/twitter-blue.svg);
+    }
+  }
 }
