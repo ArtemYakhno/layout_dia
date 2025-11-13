@@ -1,7 +1,28 @@
 'use strict';
 import { translations } from './translations/transaltions.js';
 
-let userLanguage = 'US';
+let userLanguage;
+
+console.log(localStorage.getItem('userLanguage'));
+
+if (localStorage.getItem('userLanguage')) {
+  userLanguage = localStorage.getItem('userLanguage');
+} else {
+  const shortLang = (navigator.language || navigator.userLanguage).split(
+    '-',
+  )[0];
+  const fallbackMap = {
+    en: 'US',
+    uk: 'UA',
+    ru: 'RU',
+    pl: 'PL',
+    fr: 'FR',
+    de: 'DE',
+    es: 'ES',
+  };
+  userLanguage = fallbackMap[shortLang] || 'US';
+  localStorage.setItem('userLanguage', userLanguage);
+}
 
 const switchers = document.querySelectorAll('.language-switcher');
 
@@ -23,13 +44,7 @@ switchers.forEach((languageSwitcher) => {
     if (languageItem) {
       const selectedLang = languageItem.getAttribute('data-country');
       switchLang(selectedLang);
-
-      document
-        .querySelectorAll('.language-switcher__current-flag-country')
-        .forEach((img) => {
-          img.src = `https://raw.githubusercontent.com/cristiroma/countries/c6edc915f71c06441fab4da306deac95a28d70aa/data/flags/SVG/${selectedLang}.svg`;
-        });
-
+ 
       languageSwitcher.classList.remove('language-switcher--active');
     }
   });
@@ -43,6 +58,12 @@ function translatePage() {
 }
 
 function setActiveStyle() {
+  document
+    .querySelectorAll('.language-switcher__current-flag-country')
+    .forEach((img) => {
+      img.src = `https://raw.githubusercontent.com/cristiroma/countries/c6edc915f71c06441fab4da306deac95a28d70aa/data/flags/SVG/${userLanguage}.svg`;
+    });
+
   document
     .querySelectorAll('.language-switcher__language-code--active')
     .forEach((el) =>
@@ -60,6 +81,7 @@ function setActiveStyle() {
 
 function switchLang(lang) {
   userLanguage = lang;
+  localStorage.setItem('userLanguage', userLanguage);
   setActiveStyle();
   translatePage();
 }

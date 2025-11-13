@@ -50,6 +50,9 @@
 
   &__form-input {
     @extend %input;
+    &--invalid{
+      border-bottom: 2px solid red;
+    }
   }
 
   &__form-button {
@@ -81,6 +84,7 @@
   &__block-item-data {
     @extend %fm-opensans_w-600_fs-24_lh-150_c-6C788BF;
     color: #fff;
+    width: fit-content;
   }
 
   &__socials {
