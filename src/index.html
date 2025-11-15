@@ -261,36 +261,39 @@
                   class="slider__image"
                   loading="eager"
                 />
+                <div class="swiper-lazy-preloader"></div>
               </div>
               <div class="swiper-slide slider__item">
                 <img
                   src="./images/slider/slide-2.webp"
                   alt="Slide 2"
                   class="slider__image"
-                  loading="eager"
+                  loading="lazy"
                 />
+                <div class="swiper-lazy-preloader"></div>
               </div>
               <div class="swiper-slide slider__item">
                 <img
                   src="./images/slider/slide-3.webp"
                   alt="Slide 3"
                   class="slider__image"
-                  loading="eager"
+                  loading="lazy"
                 />
+                <div class="swiper-lazy-preloader"></div>
               </div>
             </div>
             <div class="slider__navigation slider__navigation--prev">
               <img
                 src="./images/slider/arrow-left.svg"
                 alt="Previous Slide"
-                 loading="lazy"
+                loading="lazy"
               />
             </div>
             <div class="slider__navigation slider__navigation--next">
               <img
                 src="./images/slider/arrow-right.svg"
                 alt="Next Slide"
-                 loading="lazy"
+                loading="lazy"
               />
             </div>
             <p
@@ -341,7 +344,7 @@
                 class="our-expertise__card-photo"
                 src="./images/our-expertise/Branding.png"
                 alt="branding"
-                 loading="lazy"
+                loading="lazy"
               />
               <h3 class="our-expertise__card-title">Branding</h3>
               <p class="our-expertise__card-text">
@@ -354,7 +357,7 @@
                 class="our-expertise__card-photo"
                 src="./images/our-expertise/Communication.png"
                 alt="branding"
-                 loading="lazy"
+                loading="lazy"
               />
               <h3 class="our-expertise__card-title">Communication</h3>
               <p class="our-expertise__card-text">
@@ -368,7 +371,7 @@
                 class="our-expertise__card-photo"
                 src="./images/our-expertise/Strategy.png"
                 alt="branding"
-                 loading="lazy"
+                loading="lazy"
               />
               <h3 class="our-expertise__card-title">Strategy</h3>
               <p class="our-expertise__card-text">
@@ -477,7 +480,7 @@
                   class="testimonials__card-image"
                   src="./images/testimonials/Person 1.png"
                   alt="photo 1"
-                   loading="lazy"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -485,7 +488,7 @@
               class="icon icon--quators"
               src="./images/icons/quators.svg"
               alt="quators"
-               loading="lazy"
+              loading="lazy"
             ></div>
             <p class="testimonials__card-text">
               AIR’s ideas are refreshing and out of the box. Authentic team that
@@ -501,7 +504,7 @@
                   class="testimonials__card-image"
                   src="./images/testimonials/Person 2.png"
                   alt="photo 1"
-                   loading="lazy"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -524,7 +527,7 @@
                   class="testimonials__card-image"
                   src="./images/testimonials/Person 3.png"
                   alt="photo 1"
-                   loading="lazy"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -558,9 +561,7 @@
         <div class="contact-us__container container">
           <div class="contact-us__side contact-us__side--top">
             <h2 class="contact-us__title">Send us a message</h2>
-            <form
-              class="contact-us__form"
-            >
+            <form class="contact-us__form">
               <input
                 class="contact-us__form-input"
                 type="text"
@@ -579,7 +580,12 @@
                 name="message"
                 placeholder="Your message"
               />
-              <button type="submit" class="contact-us__form-button">Send</button>
+              <button
+                type="submit"
+                class="contact-us__form-button"
+              >
+                Send
+              </button>
             </form>
           </div>
           <div class="contact-us__side contact-us__side--bottom">
@@ -636,7 +642,7 @@
             class="logo"
             src="./images/logo/Logo.svg"
             alt="AIR"
-             loading="lazy"
+            loading="lazy"
           />
         </a>
         <nav class="footer__nav nav">

@@ -17,7 +17,7 @@ const swiper = new Swiper('.swiper', {
   },
   lazy: {
     loadPrevNext: true,
-    loadPrevNextAmount: 2,
+    loadPrevNextAmount: 1,
   },
 });
 
