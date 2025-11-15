@@ -11,10 +11,17 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.slider__navigation--next',
     prevEl: '.slider__navigation--prev',
   },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  lazy: {
+    loadPrevNext: true,
+    loadPrevNextAmount: 2,
+  },
 });
 
 document.documentElement.style.setProperty(
   '--scrollbar-width',
-  `${window.innerWidth - document.documentElement.clientWidth}px`
+  `${window.innerWidth - document.documentElement.clientWidth}px`,
 );
-
