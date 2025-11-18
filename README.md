@@ -1,7 +1,7 @@
 # DIA Landing Page
 
 # Visit site
-
+https://artemyakhno.github.io/layout_dia/
 
 ## Project Description
 This project is a modern and fully responsive landing page for the creative agency "AIR". It is developed with a focus on clean design, interactivity, and user convenience, showcasing best practices in front-end development. The landing page includes several key sections: "Home Screen", "About Us", "Our Expertise", "Services", "Testimonials", "Banner", and "Contact Us", which provide a complete presentation of the agency's services and advantages.
