@@ -6,22 +6,8 @@ import 'swiper/swiper-bundle.css';
 const swiper = new Swiper('.swiper', {
   modules: [Navigation],
   loop: true,
-
   navigation: {
     nextEl: '.slider__navigation--next',
     prevEl: '.slider__navigation--prev',
   },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  lazy: {
-    loadPrevNext: true,
-    loadPrevNextAmount: 1,
-  },
 });
-
-document.documentElement.style.setProperty(
-  '--scrollbar-width',
-  `${window.innerWidth - document.documentElement.clientWidth}px`,
-);

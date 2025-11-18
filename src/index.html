@@ -11,9 +11,15 @@
     />
     <title>Air</title>
     <link
+      rel="icon"
+      type="image/svg"
+      href="images/logo/Logo.svg"
+    />
+    <link
       rel="stylesheet"
       href="./styles/main.scss"
     />
+    <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.0/lib/anime.min.js"></script>
     <script
       defer
       type="module"
@@ -43,28 +49,28 @@
         <div class="header__center">
           <nav class="header__nav nav">
             <a
-              href="#"
+              href="#about-us"
               class="nav__item"
               data-language="about-us"
             >
               About us
             </a>
             <a
-              href="#"
+              href="#services"
               class="nav__item"
               data-language="services"
             >
               Services
             </a>
             <a
-              href="#"
+              href="#testimonials"
               class="nav__item"
               data-language="testimonials"
             >
               Testimonials
             </a>
             <a
-              href="#"
+              href="#contact-us"
               class="nav__item"
               data-language="contact-us"
             >
@@ -114,7 +120,7 @@
         </div>
         <div class="header__right">
           <a
-            href="#"
+            href="#contact-us"
             class="header__hire-us"
             data-language="hire-us"
           >
@@ -148,28 +154,28 @@
           <div class="menu__bottom container">
             <nav class="menu__nav nav">
               <a
-                href="#"
+                href="#about-us"
                 class="nav__item"
                 data-language="about-us"
               >
                 About us
               </a>
               <a
-                href="#"
+                href="#services"
                 class="nav__item"
                 data-language="services"
               >
                 Services
               </a>
               <a
-                href="#"
+                href="#testimonials"
                 class="nav__item"
                 data-language="testimonials"
               >
                 Testimonials
               </a>
               <a
-                href="#"
+                href="#contact-us"
                 class="nav__item"
                 data-language="contact-us"
               >
@@ -177,7 +183,7 @@
               </a>
             </nav>
             <a
-              href="#"
+              href="#contact-us"
               class="menu__hire-us"
               data-language="hire-us"
             >
@@ -226,6 +232,7 @@
       </div>
     </aside>
     <main class="main">
+      <!-- Home Screen Section -->
       <section class="home-screen">
         <div class="container">
           <div class="home-screen__content">
@@ -259,9 +266,8 @@
                   src="./images/slider/slide-1.webp"
                   alt="Slide 1"
                   class="slider__image"
-                  loading="eager"
+                  loading="lazy"
                 />
-                <div class="swiper-lazy-preloader"></div>
               </div>
               <div class="swiper-slide slider__item">
                 <img
@@ -270,7 +276,6 @@
                   class="slider__image"
                   loading="lazy"
                 />
-                <div class="swiper-lazy-preloader"></div>
               </div>
               <div class="swiper-slide slider__item">
                 <img
@@ -279,7 +284,6 @@
                   class="slider__image"
                   loading="lazy"
                 />
-                <div class="swiper-lazy-preloader"></div>
               </div>
             </div>
             <div class="slider__navigation slider__navigation--prev">
@@ -305,6 +309,7 @@
           </div>
         </div>
       </section>
+      <!-- About Us Section -->
       <section
         class="about-us container"
         id="about-us"
@@ -327,6 +332,7 @@
           </p>
         </div>
       </section>
+      <!-- Our Expertise Section -->
       <section
         class="our-expertise"
         id="our-expertise"
@@ -346,8 +352,16 @@
                 alt="branding"
                 loading="lazy"
               />
-              <h3 class="our-expertise__card-title">Branding</h3>
-              <p class="our-expertise__card-text">
+              <h3
+                class="our-expertise__card-title"
+                data-language="branding-title"
+              >
+                Branding
+              </h3>
+              <p
+                class="our-expertise__card-text"
+                data-language="branding-text"
+              >
                 We create additional value for companies, products, services as
                 well as verbal and visual ways to deliver it to the audience.
               </p>
@@ -356,11 +370,19 @@
               <img
                 class="our-expertise__card-photo"
                 src="./images/our-expertise/Communication.png"
-                alt="branding"
+                alt="communication"
                 loading="lazy"
               />
-              <h3 class="our-expertise__card-title">Communication</h3>
-              <p class="our-expertise__card-text">
+              <h3
+                class="our-expertise__card-title"
+                data-language="communication-title"
+              >
+                Communication
+              </h3>
+              <p
+                class="our-expertise__card-text"
+                data-language="communication-text"
+              >
                 We strive to create communications that can increase media
                 performance. We use everything — words, meanings, stories, art,
                 movies.
@@ -370,11 +392,19 @@
               <img
                 class="our-expertise__card-photo"
                 src="./images/our-expertise/Strategy.png"
-                alt="branding"
+                alt="strategy"
                 loading="lazy"
               />
-              <h3 class="our-expertise__card-title">Strategy</h3>
-              <p class="our-expertise__card-text">
+              <h3
+                class="our-expertise__card-title"
+                data-language="strategy-title"
+              >
+                Strategy
+              </h3>
+              <p
+                class="our-expertise__card-text"
+                data-language="strategy-text"
+              >
                 We create business growth strategies, from the moment of its
                 birth to the achievement of the necessary business indicators.
               </p>
@@ -382,11 +412,29 @@
           </div>
         </div>
       </section>
-      <section class="services container">
+
+      <!-- Services Section -->
+      <section
+        id="services"
+        class="services container"
+      >
         <div class="services__top">
-          <h4 class="services__sub-title">Services</h4>
-          <h2 class="services__title">Air is a full service creative agency</h2>
-          <p class="services__text">
+          <h4
+            class="services__sub-title"
+            data-language="services-subtitle"
+          >
+            Services
+          </h4>
+          <h2
+            class="services__title"
+            data-language="services-title"
+          >
+            Air is a full service creative agency
+          </h2>
+          <p
+            class="services__text"
+            data-language="services-text"
+          >
             Deep analytics, strong strategy and bright creative ideas.
             <br />
             <br />
@@ -397,25 +445,34 @@
         <div class="services__bottom">
           <div class="services__card">
             <div class="services__card-number">001</div>
-            <div class="services__card-text">
+            <div
+              class="services__card-text"
+              data-language="service-1-text"
+            >
               Brand Development
               <br />
               Copywriting
               <br />
-              Logo & Webite Design
+              Logo & Website Design
               <br />
               Packaging
             </div>
-            <div class="services__card-action">
+            <a
+              href="#our-expertise"
+              class="services__card-action"
+            >
               <div class="services__card-circle">
                 <div class="icon icon--arow-right-white"></div>
               </div>
-              <p>Lear more</p>
-            </div>
+              <p data-language="learn-more-link">Learn more</p>
+            </a>
           </div>
           <div class="services__card">
             <div class="services__card-number">002</div>
-            <div class="services__card-text">
+            <div
+              class="services__card-text"
+              data-language="service-2-text"
+            >
               Content Production
               <br />
               Graphic Design
@@ -424,16 +481,22 @@
               <br />
               Post Production
             </div>
-            <div class="services__card-action">
+            <a
+              href="#our-expertise"
+              class="services__card-action"
+            >
               <div class="services__card-circle">
                 <div class="icon icon--arow-right-white"></div>
               </div>
-              <p>Lear more</p>
-            </div>
+              <p data-language="learn-more-link">Learn more</p>
+            </a>
           </div>
           <div class="services__card">
             <div class="services__card-number">003</div>
-            <div class="services__card-text">
+            <div
+              class="services__card-text"
+              data-language="service-3-text"
+            >
               Marketing Strategy
               <br />
               Email Marketing
@@ -442,16 +505,22 @@
               <br />
               Blog Content & SEO
             </div>
-            <div class="services__card-action">
+            <a
+              href="#our-expertise"
+              class="services__card-action"
+            >
               <div class="services__card-circle">
                 <div class="icon icon--arow-right-white"></div>
               </div>
-              <p>Lear more</p>
-            </div>
+              <p data-language="learn-more-link">Learn more</p>
+            </a>
           </div>
           <div class="services__card">
             <div class="services__card-number">004</div>
-            <div class="services__card-text">
+            <div
+              class="services__card-text"
+              data-language="service-4-text"
+            >
               Digital Communications
               <br />
               Influencer Marketing
@@ -460,18 +529,38 @@
               <br />
               Strategic Partnerships
             </div>
-            <div class="services__card-action">
+            <a
+              href="#our-expertise"
+              class="services__card-action"
+            >
               <div class="services__card-circle">
                 <div class="icon icon--arow-right-white"></div>
               </div>
-              <p>Lear more</p>
-            </div>
+              <p data-language="learn-more-link">Learn more</p>
+            </a>
           </div>
         </div>
       </section>
-      <section class="testimonials container">
-        <h4 class="testimonials__sub-title">Testimonials</h4>
-        <h2 class="testimonials__title">What people say</h2>
+
+      <!-- Testimonials Section -->
+      <section
+        id="testimonials"
+        class="testimonials container"
+      >
+        <div class="testimonials_top">
+          <h4
+            class="testimonials__sub-title"
+            data-language="testimonials-subtitle"
+          >
+            Testimonials
+          </h4>
+          <h2
+            class="testimonials__title"
+            data-language="testimonials-title"
+          >
+            What people say
+          </h2>
+        </div>
         <div class="testimonials__content">
           <div class="testimonials__card">
             <div class="testimonials__card-photo-wrapper">
@@ -484,18 +573,26 @@
                 />
               </div>
             </div>
-            <div
-              class="icon icon--quators"
-              src="./images/icons/quators.svg"
-              alt="quators"
-              loading="lazy"
-            ></div>
-            <p class="testimonials__card-text">
-              AIR’s ideas are refreshing and out of the box. Authentic team that
+            <div class="icon icon--quators"></div>
+            <p
+              class="testimonials__card-text"
+              data-language="testimonial-1"
+            >
+              AIR's ideas are refreshing and out of the box. Authentic team that
               focuses on the important path of the brand.
             </p>
-            <p class="testimonials__card-name">Tal Gilad</p>
-            <p class="testimonials__card-profesion">Teach for America</p>
+            <p
+              class="testimonials__card-name"
+              data-language="testimonial-1-name"
+            >
+              Tal Gilad
+            </p>
+            <p
+              class="testimonials__card-profesion"
+              data-language="testimonial-1-position"
+            >
+              Teach for America
+            </p>
           </div>
           <div class="testimonials__card">
             <div class="testimonials__card-photo-wrapper">
@@ -503,22 +600,31 @@
                 <img
                   class="testimonials__card-image"
                   src="./images/testimonials/Person 2.png"
-                  alt="photo 1"
+                  alt="photo 2"
                   loading="lazy"
                 />
               </div>
             </div>
-            <div
-              class="icon icon--quators"
-              src="./images/icons/quators.svg"
-              alt="quators"
-            ></div>
-            <p class="testimonials__card-text">
+            <div class="icon icon--quators"></div>
+            <p
+              class="testimonials__card-text"
+              data-language="testimonial-2"
+            >
               AIR is an exceptional agency that leads with creative talent,
               first-class account servicing.
             </p>
-            <p class="testimonials__card-name">Azadeh Hawkins</p>
-            <p class="testimonials__card-profesion">Hawkins Consulting</p>
+            <p
+              class="testimonials__card-name"
+              data-language="testimonial-2-name"
+            >
+              Azadeh Hawkins
+            </p>
+            <p
+              class="testimonials__card-profesion"
+              data-language="testimonial-2-position"
+            >
+              Hawkins Consulting
+            </p>
           </div>
           <div class="testimonials__card">
             <div class="testimonials__card-photo-wrapper">
@@ -526,73 +632,122 @@
                 <img
                   class="testimonials__card-image"
                   src="./images/testimonials/Person 3.png"
-                  alt="photo 1"
+                  alt="photo 3"
                   loading="lazy"
                 />
               </div>
             </div>
-            <div
-              class="icon icon--quators"
-              src="./images/icons/quators.svg"
-              alt="quators"
-            ></div>
-            <p class="testimonials__card-text">
+            <div class="icon icon--quators"></div>
+            <p
+              class="testimonials__card-text"
+              data-language="testimonial-3"
+            >
               AIR raises the agency bar to stratospheric heights on both
               creative output and client service.
             </p>
-            <p class="testimonials__card-name">Michel Grover</p>
-            <p class="testimonials__card-profesion">Hulu</p>
+            <p
+              class="testimonials__card-name"
+              data-language="testimonial-3-name"
+            >
+              Michel Grover
+            </p>
+            <p
+              class="testimonials__card-profesion"
+              data-language="testimonial-3-position"
+            >
+              Hulu
+            </p>
           </div>
         </div>
       </section>
+
+      <!-- Banner Section -->
       <section class="banner">
         <div class="banner__container">
           <div class="banner__content container">
-            <h2 class="banner__title">Vision, Passion, Results</h2>
-            <p class="banner__text">
+            <h2
+              class="banner__title"
+              data-language="banner-title"
+            >
+              Vision, Passion, Results
+            </h2>
+            <p
+              class="banner__text"
+              data-language="banner-text"
+            >
               We are sure that first-rate job is possible only if all three
               components are united.
             </p>
-            <a class="banner__button">Apply</a>
+            <a
+              href="#contact-us"
+              class="banner__button"
+              data-language="banner-button"
+            >
+              Apply
+            </a>
           </div>
         </div>
       </section>
-      <section class="contact-us">
+
+      <!-- Contact Us Section -->
+      <section
+        id="contact-us"
+        class="contact-us"
+      >
         <div class="contact-us__container container">
           <div class="contact-us__side contact-us__side--top">
-            <h2 class="contact-us__title">Send us a message</h2>
+            <h2
+              class="contact-us__title"
+              data-language="contact-title"
+            >
+              Send us a message
+            </h2>
             <form class="contact-us__form">
               <input
                 class="contact-us__form-input"
                 type="text"
                 name="email"
+                data-language="form-email"
                 placeholder="Your email"
               />
               <input
                 class="contact-us__form-input"
                 type="text"
                 name="name"
+                data-language="form-name"
                 placeholder="Your name"
               />
-              <input
+              <textarea
                 class="contact-us__form-input"
                 type="text"
                 name="message"
+                data-language="form-message"
                 placeholder="Your message"
-              />
+              ></textarea>
               <button
                 type="submit"
                 class="contact-us__form-button"
+                data-language="form-send"
               >
                 Send
               </button>
             </form>
           </div>
           <div class="contact-us__side contact-us__side--bottom">
-            <h2 class="contact-us__title">Contact us</h2>
+            <h2
+              class="contact-us__title"
+              data-language="contact-us-title"
+            >
+              Contact us
+            </h2>
             <div class="contact-us__blocks">
               <div class="contact-us__block-item">
-                <p class="contact-us__block-item-text">Call us</p>
+                <p
+                  class="contact-us__block-item-text"
+                  data-language="call-us"
+                >
+                  Call us
+                </p>
                 <a
                   class="contact-us__block-item-data"
                   href="tel:654 321 987"
@@ -601,7 +756,12 @@
                 </a>
               </div>
               <div class="contact-us__block-item">
-                <p class="contact-us__block-item-text">Visit us</p>
+                <p
+                  class="contact-us__block-item-text"
+                  data-language="visit-us"
+                >
+                  Visit us
+                </p>
                 <a
                   class="contact-us__block-item-data"
                   target="_blank"
@@ -611,7 +771,12 @@
                 </a>
               </div>
               <div class="contact-us__block-item">
-                <p class="contact-us__block-item-text">Our socials</p>
+                <p
+                  class="contact-us__block-item-text"
+                  data-language="our-socials"
+                >
+                  Our socials
+                </p>
                 <div class="contact-us__socials">
                   <a
                     href="https://facebook.com"
@@ -632,6 +797,7 @@
         </div>
       </section>
     </main>
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer__content container">
         <a
@@ -647,28 +813,28 @@
         </a>
         <nav class="footer__nav nav">
           <a
-            href="#"
+            href="#about-us"
             class="nav__item"
             data-language="about-us"
           >
             About us
           </a>
           <a
-            href="#"
+            href="#services"
             class="nav__item"
             data-language="services"
           >
             Services
           </a>
           <a
-            href="#"
+            href="#testimonials"
             class="nav__item"
             data-language="testimonials"
           >
             Testimonials
           </a>
           <a
-            href="#"
+            href="#contact-us"
             class="nav__item"
             data-language="contact-us"
           >

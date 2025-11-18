@@ -44,17 +44,25 @@ switchers.forEach((languageSwitcher) => {
     if (languageItem) {
       const selectedLang = languageItem.getAttribute('data-country');
       switchLang(selectedLang);
- 
+
       languageSwitcher.classList.remove('language-switcher--active');
     }
   });
 });
 
 function translatePage() {
-  // document.querySelectorAll("[data-language]").forEach(el => {
-  //   const key = el.getAttribute("data-language");
-  //   el.textContent = translations[userLanguage][key];
-  // });
+  document.querySelectorAll("[data-language]").forEach(el => {
+    const key = el.getAttribute("data-language");
+    el.textContent = translations[userLanguage][key];
+  });
+  document.querySelectorAll("input[data-language], textarea[data-language]").forEach(el => {
+  const key = el.getAttribute("data-language");
+  const translation = translations[userLanguage]?.[key];
+  if (translation) {
+    el.placeholder = translation;
+    el.textContent = ''
+  }
+});
 }
 
 function setActiveStyle() {
