@@ -1,8 +1,16 @@
-import { animate, createTimeline, stagger, onScroll } from 'animejs';
+import { animate, stagger } from 'animejs';
 
-// ============================================
-// 1. АНІМАЦІЯ ЕЛЕМЕНТІВ ПРИ ПРОКРУТЦІ
-// ============================================
+const isMobile = () => {
+  return window.matchMedia('(min-width: 320px)').matches;
+};
+
+const isTablet = () => {
+  return window.matchMedia('(min-width: 640px)').matches;
+};
+
+const isDesktop = () => {
+  return window.matchMedia('(min-width: 1280px)').matches;
+};
 
 const observeElements = () => {
   const options = {
@@ -25,35 +33,53 @@ const observeElements = () => {
             opacity: [0, 1],
             scale: [0.9, 1],
             duration: 1000,
-            easing: 'outElastic(1, .8)',
+            ease: 'out(4, 0.8)',
           });
           animate(element, {
             translateY: [50, 0],
             opacity: [0, 1],
             duration: 1200,
-            easing: 'out(3)',
+            ease: 'out(3)',
           });
         }
 
-        if (element.classList.contains('our-expertise__card')) {
-          const title = document.querySelector('.our-expertise__title');
-          animate(title, {
+        if (element.classList.contains('our-expertise__title')) {
+          animate(element, {
             translateY: [-80, 0],
             opacity: [0, 1],
             scale: [0.9, 1],
             duration: 1000,
-            easing: 'outElastic(1, .8)',
+            ease: 'out(4, 0.8)',
           });
+        }
 
+        if (element.classList.contains('our-expertise__cards-content') && isDesktop()) {
+          element.style.opacity = 1;
           const cards = document.querySelectorAll('.our-expertise__card');
-          animate(cards, {
+
+          const animation = animate(cards, {
             translateY: [80, 0],
             opacity: [0, 1],
             scale: [0.9, 1],
             duration: 1000,
-            easing: 'outElastic(1, .8)',
-            delay: stagger(150),
+            ease: 'out(4, 0.8)',
+            delay: stagger(300),
           });
+
+        }
+
+        if (element.classList.contains('our-expertise__card') && !isDesktop()) {
+          document.querySelector('.our-expertise__cards-content').style.opacity = 1;
+
+          const animation = animate(element, {
+            translateY: [80, 0],
+            opacity: [0, 1],
+            scale: [0.9, 1],
+            duration: 1000,
+            ease: 'out(4, 0.8)',
+            delay: stagger(300),
+          });
+
         }
 
         if (element.classList.contains('services__top')) {
@@ -62,19 +88,32 @@ const observeElements = () => {
             opacity: [0, 1],
             scale: [0.9, 1],
             duration: 1000,
-            easing: 'outElastic(1, .8)',
+            ease: 'out(4, 0.8)',
           });
         }
 
-        if (element.classList.contains('services__card')) {
+        if (element.classList.contains('services__bottom') && isDesktop()) {
+          element.style.opacity = 1;
           const cards = document.querySelectorAll('.services__card');
           animate(cards, {
             translateX: [-100, 0],
             opacity: [0, 1],
             rotate: [-5, 0],
             duration: 1200,
-            easing: 'out(3)',
-            delay: stagger(100),
+            ease: 'out(3)',
+            delay: stagger(400),
+          });
+        }
+
+        if (element.classList.contains('services__card') && !isDesktop()) {
+          document.querySelector('.services__bottom').style.opacity = 1;
+          animate(element, {
+            translateX: [-100, 0],
+            opacity: [0, 1],
+            rotate: [-5, 0],
+            duration: 1200,
+            ease: 'out(3)',
+            delay: stagger(400),
           });
         }
 
@@ -84,7 +123,35 @@ const observeElements = () => {
             opacity: [0, 1],
             scale: [0.9, 1],
             duration: 1000,
-            easing: 'outElastic(1, .8)',
+            ease: 'out(4, 0.8)',
+          });
+        }
+
+        if (
+          element.classList.contains('testimonials__content') &&
+          isDesktop()
+        ) {
+          element.style.opacity = 1;
+          const cards = document.querySelectorAll('.testimonials__card');
+
+          animate(cards, {
+            scale: [0.8, 1],
+            opacity: [0, 1],
+            duration: 800,
+            ease: 'out(5, 2)',
+            delay: stagger(400),
+          });
+        }
+
+        if (element.classList.contains('testimonials__card') && !isDesktop()) {
+          const content = document.querySelector('.testimonials__content');
+          content.style.opacity = 1;
+          animate(element, {
+            scale: [0.8, 1],
+            opacity: [0, 1],
+            duration: 800,
+            ease: 'out(5, 2)',
+            delay: stagger(400),
           });
         }
 
@@ -93,19 +160,7 @@ const observeElements = () => {
             translateY: [-20, 0],
             opacity: [0, 1],
             duration: 800,
-            delay: stagger(100),
-            easing: 'out(3)'
-          });
-        }
-
-        if (element.classList.contains('testimonials__card')) {
-          const cards = document.querySelectorAll('.testimonials__card');
-          animate(cards, {
-            scale: [0.8, 1],
-            opacity: [0, 1],
-            duration: 800,
-            easing: 'outBack(2)',
-            delay: stagger(200),
+            ease: 'out(3)',
           });
         }
 
@@ -115,7 +170,7 @@ const observeElements = () => {
             opacity: [0, 1],
             translateY: [30, 0],
             duration: 1000,
-            easing: 'outQuad(2)',
+            ease: 'out(2)',
           });
 
           const bannerTitle = element.querySelector('.banner__title');
@@ -127,7 +182,7 @@ const observeElements = () => {
               translateY: [40, 0],
               opacity: [0, 1],
               duration: 1000,
-              easing: 'out(3)',
+              ease: 'out(3)',
               delay: 200,
             });
           }
@@ -137,7 +192,7 @@ const observeElements = () => {
               translateY: [40, 0],
               opacity: [0, 1],
               duration: 1000,
-              easing: 'out(3)',
+              ease: 'out(3)',
               delay: 400,
             });
           }
@@ -147,7 +202,7 @@ const observeElements = () => {
               scale: [0, 1],
               opacity: [0, 1],
               duration: 600,
-              easing: 'outBack(2)',
+              ease: 'out(5, 2)',
               delay: 600,
             });
           }
@@ -164,7 +219,7 @@ const observeElements = () => {
               translateX: [-80, 0],
               opacity: [0, 1],
               duration: 1000,
-              easing: 'out(3)',
+              ease: 'out(3)',
             });
 
             const formInputs = element.querySelectorAll(
@@ -175,8 +230,8 @@ const observeElements = () => {
                 translateX: [-40, 0],
                 opacity: [0, 1],
                 duration: 800,
-                easing: 'out(2)',
-                delay: stagger(100, { start: 300 }),
+                ease: 'out(2)',
+                delay: stagger(100, { startDelay: 300 }),
               });
             }
 
@@ -188,7 +243,7 @@ const observeElements = () => {
                 scale: [0, 1],
                 opacity: [0, 1],
                 duration: 600,
-                easing: 'outBack(2)',
+                ease: 'out(5, 2)',
                 delay: 700,
               });
             }
@@ -199,7 +254,7 @@ const observeElements = () => {
               translateX: [80, 0],
               opacity: [0, 1],
               duration: 1000,
-              easing: 'out(3)',
+              ease: 'out(3)',
             });
 
             const contactBlocks = element.querySelectorAll(
@@ -210,8 +265,8 @@ const observeElements = () => {
                 translateY: [30, 0],
                 opacity: [0, 1],
                 duration: 800,
-                easing: 'out(2)',
-                delay: stagger(150, { start: 300 }),
+                ease: 'out(2)',
+                delay: stagger(150, { startDelay: 300 }),
               });
             }
 
@@ -222,8 +277,8 @@ const observeElements = () => {
                 rotate: [180, 0],
                 opacity: [0, 1],
                 duration: 600,
-                easing: 'outElastic(1, .6)',
-                delay: stagger(100, { start: 700 }),
+                ease: 'out(4, 0.6)',
+                delay: stagger(100, { startDelay: 700 }),
               });
             }
           }
@@ -238,10 +293,14 @@ const observeElements = () => {
 
   const elementsToAnimate = document.querySelectorAll(`
     .about-us__text,
+    .our-expertise__title,
+    .our-expertise__cards-content,
     .our-expertise__card,
     .services__top,
+    .services__bottom,
     .services__card,
     .testimonials_top,
+    .testimonials__content,
     .testimonials__card,
     .banner__content,
     .contact-us__side,
@@ -249,7 +308,7 @@ const observeElements = () => {
   `);
 
   elementsToAnimate.forEach((el) => {
-    el.style.opacity = '0';
+    el.style.opacity = 0;
     observer.observe(el);
   });
 };
@@ -268,13 +327,13 @@ const animateHeaderOnScroll = () => {
         animate(header, {
           translateY: -126,
           duration: 300,
-          easing: 'inOut(2)',
+          ease: 'inOut(2)',
         });
       } else {
         animate(header, {
           translateY: 0,
           duration: 300,
-          easing: 'out(2)',
+          ease: 'out(2)',
         });
       }
     } else {
@@ -282,7 +341,7 @@ const animateHeaderOnScroll = () => {
       animate(header, {
         translateY: 0,
         duration: 300,
-        easing: 'out(2)',
+        ease: 'out(2)',
       });
     }
 
@@ -295,7 +354,7 @@ const animateHomeScreen = () => {
     translateX: [100, 0],
     opacity: [0, 1],
     duration: 1500,
-    easing: 'out(3)',
+    ease: 'out(3)',
     delay: 0,
   });
 
@@ -303,7 +362,7 @@ const animateHomeScreen = () => {
     translateY: [50, 0],
     opacity: [0, 1],
     duration: 1200,
-    easing: 'out(3)',
+    ease: 'out(3)',
     delay: 100,
   });
 
@@ -311,7 +370,7 @@ const animateHomeScreen = () => {
     scale: [0, 1],
     opacity: [0, 1],
     duration: 800,
-    easing: 'outBack(2)',
+    ease: 'out(5, 2)',
     delay: 200,
   });
 
@@ -319,7 +378,7 @@ const animateHomeScreen = () => {
     translateY: [100, 0],
     opacity: [0, 1],
     duration: 1500,
-    easing: 'out(3)',
+    ease: 'out(3)',
     delay: 300,
   });
 };
@@ -335,7 +394,7 @@ const addCardHoverAnimations = () => {
         translateY: -10,
         scale: 1.02,
         duration: 400,
-        easing: 'out(2)',
+        ease: 'out(2)',
       });
     });
 
@@ -344,7 +403,7 @@ const addCardHoverAnimations = () => {
         translateY: 0,
         scale: 1,
         duration: 400,
-        easing: 'out(2)',
+        ease: 'out(2)',
       });
     });
   });
@@ -360,7 +419,7 @@ const animateButtons = () => {
       animate(button, {
         scale: 1.05,
         duration: 300,
-        easing: 'out(2)',
+        ease: 'out(2)',
       });
     });
 
@@ -368,7 +427,7 @@ const animateButtons = () => {
       animate(button, {
         scale: 1,
         duration: 300,
-        easing: 'out(2)',
+        ease: 'out(2)',
       });
     });
   });
@@ -382,7 +441,7 @@ const animateNavigation = () => {
       animate(item, {
         translateY: -3,
         duration: 300,
-        easing: 'out(2)',
+        ease: 'out(2)',
       });
     });
 
@@ -390,7 +449,7 @@ const animateNavigation = () => {
       animate(item, {
         translateY: 0,
         duration: 300,
-        easing: 'out(2)',
+        ease: 'out(2)',
       });
     });
   });
@@ -404,7 +463,7 @@ const animateForm = () => {
       animate(input, {
         scale: 1.02,
         duration: 300,
-        easing: 'out(2)',
+        ease: 'out(2)',
       });
     });
 
@@ -412,7 +471,7 @@ const animateForm = () => {
       animate(input, {
         scale: 1,
         duration: 300,
-        easing: 'out(2)',
+        ease: 'out(2)',
       });
     });
   });
@@ -426,7 +485,7 @@ const animateLogo = () => {
       animate(logo, {
         scale: [1, 1.3, 1],
         duration: 800,
-        easing: 'inOut(2)',
+        ease: 'inOut(2)',
       });
     });
   });
