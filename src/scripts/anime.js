@@ -53,7 +53,10 @@ const observeElements = () => {
           });
         }
 
-        if (element.classList.contains('our-expertise__cards-content') && isDesktop()) {
+        if (
+          element.classList.contains('our-expertise__cards-content') &&
+          isDesktop()
+        ) {
           element.style.opacity = 1;
           const cards = document.querySelectorAll('.our-expertise__card');
 
@@ -65,11 +68,12 @@ const observeElements = () => {
             ease: 'out(4, 0.8)',
             delay: stagger(300),
           });
-
         }
 
         if (element.classList.contains('our-expertise__card') && !isDesktop()) {
-          document.querySelector('.our-expertise__cards-content').style.opacity = 1;
+          document.querySelector(
+            '.our-expertise__cards-content',
+          ).style.opacity = 1;
 
           const animation = animate(element, {
             translateY: [80, 0],
@@ -79,7 +83,6 @@ const observeElements = () => {
             ease: 'out(4, 0.8)',
             delay: stagger(300),
           });
-
         }
 
         if (element.classList.contains('services__top')) {
@@ -491,6 +494,20 @@ const animateLogo = () => {
   });
 };
 
+const animateIcon = () => {
+  const icons = document.querySelectorAll('.icon');
+
+  icons.forEach((icon) => {
+    icon.addEventListener('mouseenter', () => {
+      animate(icon, {
+        scale: [1, 1.3, 1],
+        duration: 800,
+        ease: 'Out(2)',
+      });
+    });
+  });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   animateHomeScreen();
   observeElements();
@@ -499,5 +516,6 @@ document.addEventListener('DOMContentLoaded', () => {
   animateButtons();
   animateNavigation();
   animateForm();
+  animateIcon();
   animateLogo();
 });

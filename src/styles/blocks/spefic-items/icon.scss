@@ -8,6 +8,7 @@
 
   &--burger {
     background-image: url(../images/icons/burger.svg);
+    
     // &:hover {
     //   background-image: url(../images/icons/Icon-Burger-menu-hover.svg);
     // }
@@ -35,8 +36,8 @@
     background-image: url(../images/icons/twitter.svg);
     width: 32px;
 
-    &:hover {
-      background-image: url(../images/icons/twitter-blue.svg);
-    }
+    // &:hover {
+    //   background-image: url(../images/icons/twitter-blue.svg);
+    // }
   }
 }

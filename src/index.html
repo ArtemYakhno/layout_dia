@@ -702,7 +702,10 @@
             >
               Send us a message
             </h2>
-            <form class="contact-us__form">
+            <form
+              autocomplete="offf"
+              class="contact-us__form"
+            >
               <input
                 class="contact-us__form-input"
                 type="text"
@@ -720,6 +723,7 @@
               <textarea
                 class="contact-us__form-input"
                 type="text"
+                rows="1"
                 name="message"
                 data-language="form-message"
                 placeholder="Your message"
@@ -779,14 +783,17 @@
                 </p>
                 <div class="contact-us__socials">
                   <a
+                    target="_blank"
                     href="https://facebook.com"
                     class="icon icon--facebook"
                   ></a>
                   <a
+                    target="_blank"
                     href="https://x.com/"
                     class="icon icon--twitter"
                   ></a>
                   <a
+                    target="_blank"
                     href="https://www.instagram.com/"
                     class="icon icon--instagram"
                   ></a>

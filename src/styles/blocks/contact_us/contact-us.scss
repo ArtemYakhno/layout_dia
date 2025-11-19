@@ -51,6 +51,7 @@
   }
 
   &__form-input {
+    resize: none;
     @extend %input;
     &--invalid{
       border-bottom: 2px solid red;
